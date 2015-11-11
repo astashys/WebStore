@@ -31,10 +31,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.3.5.v20151012</version>
                 <configuration>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <webApp>
-                        <contextPath>/spring2</contextPath>
-                    </webApp>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>                    
                 </configuration>
             </plugin>
         </plugins>
