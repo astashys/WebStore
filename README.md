@@ -1,5 +1,5 @@
-# WebStore
+### Installation
 
-
-**INSTALLATION**
-```mvn jetty:run
+```sh
+$ mvn jetty:run
+```
