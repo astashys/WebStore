@@ -5,7 +5,6 @@ import ua.net.bestcode.webstore.model.User;
 
 import java.util.List;
 
-public interface IUserDao {
-    List<User> findAll();
-    void addUser(User user);
+public interface IUserDAO extends IGenericDAO<User> {
+
 }
