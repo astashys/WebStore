@@ -3,16 +3,14 @@ package ua.net.bestcode.webstore.manager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ua.net.bestcode.webstore.dao.IUserDao;
+import ua.net.bestcode.webstore.dao.IUserDAO;
 import ua.net.bestcode.webstore.model.User;
-
-import javax.annotation.PostConstruct;
 
 @Service
 public class UserManager implements IUserManager {
 
     @Autowired
-    IUserDao userDao;
+    IUserDAO userDao;
 
 
     /**
@@ -24,7 +22,7 @@ public class UserManager implements IUserManager {
         User user = new User();
         user.setName("Suspect");
         user.setEmail("suspect@gmail.com");
-        userDao.addUser(user);
+        userDao.persist(user);
         return userDao.findAll().size();
     }
 
