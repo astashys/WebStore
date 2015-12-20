@@ -1,6 +1,8 @@
 package ua.net.bestcode.webstore.manager.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.net.bestcode.webstore.dao.impl.CartDAO;
 import ua.net.bestcode.webstore.manager.ICartManager;
 import ua.net.bestcode.webstore.manager.util.CartList;
@@ -9,6 +11,8 @@ import ua.net.bestcode.webstore.model.Cart;
 /**
  * Created by petroborovets on 12/20/15.
  */
+@Service
+@Transactional
 public class CartManager implements ICartManager {
 
     @Autowired

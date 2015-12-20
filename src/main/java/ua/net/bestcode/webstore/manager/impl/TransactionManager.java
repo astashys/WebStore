@@ -1,6 +1,8 @@
 package ua.net.bestcode.webstore.manager.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.net.bestcode.webstore.dao.impl.TransactionDAO;
 import ua.net.bestcode.webstore.manager.ITransactionManager;
 import ua.net.bestcode.webstore.manager.util.TransactionList;
@@ -9,6 +11,8 @@ import ua.net.bestcode.webstore.model.Transaction;
 /**
  * Created by petroborovets on 12/20/15.
  */
+@Service
+@Transactional
 public class TransactionManager implements ITransactionManager {
     @Autowired
     TransactionDAO transactionDAO;
